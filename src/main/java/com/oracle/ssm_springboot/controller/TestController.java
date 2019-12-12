@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -38,5 +39,9 @@ public class TestController {
         session.setAttribute("user", user);
         logger.info(request.getRemoteAddr());
         return "/index/test";
+    }
+    @PostMapping("test1")
+    public void test1(){
+        System.out.println("测shi");
     }
 }
