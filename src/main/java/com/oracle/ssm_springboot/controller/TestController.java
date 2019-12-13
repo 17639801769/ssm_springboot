@@ -40,8 +40,5 @@ public class TestController {
         logger.info(request.getRemoteAddr());
         return "/index/test";
     }
-    @PostMapping("test1")
-    public void test1(){
-        System.out.println("测shi");
-    }
+
 }
